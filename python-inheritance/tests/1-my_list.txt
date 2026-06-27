@@ -6,9 +6,13 @@ Using ``MyList``
 First, we can import the module and class to start testing:
     >>> MyList = __import__('1-my_list').MyList
 
-We can instantiate the object normally:
+We can instantiate the object normally and check it empty:
     >>> my_list = MyList()
     >>> print(my_list)
+    []
+
+We must check the print_sorted method with an empty list:
+    >>> my_list.print_sorted()
     []
 
 We can append normal integer elements to our custom list:
