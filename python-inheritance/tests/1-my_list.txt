@@ -1,0 +1,39 @@
+The ``1-my_list`` module
+========================
+
+Using ``MyList``
+----------------
+First, we can import the module and class to start testing:
+    >>> MyList = __import__('1-my_list').MyList
+
+We can instantiate the object normally:
+    >>> my_list = MyList()
+    >>> print(my_list)
+    []
+
+We can append normal integer elements to our custom list:
+    >>> my_list.append(1)
+    >>> my_list.append(4)
+    >>> my_list.append(2)
+    >>> my_list.append(3)
+    >>> my_list.append(5)
+    >>> print(my_list)
+    [1, 4, 2, 3, 5]
+
+Now, we test the print_sorted() method which should print a sorted version:
+    >>> my_list.print_sorted()
+    [1, 2, 3, 4, 5]
+
+The original list must remain unmodified after sorting:
+    >>> print(my_list)
+    [1, 4, 2, 3, 5]
+
+Testing with negative and zero values:
+    >>> another_list = MyList()
+    >>> another_list.append(10)
+    >>> another_list.append(-5)
+    >>> another_list.append(0)
+    >>> another_list.print_sorted()
+    [-5, 0, 10]
+    >>> print(another_list)
+    [10, -5, 0]
