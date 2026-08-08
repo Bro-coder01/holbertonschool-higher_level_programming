@@ -7,5 +7,5 @@ if (isNaN(size)) {
   for (x = 0, row = ''; x < size; x++, row += 'X');
   for (x = 0; x < size; x++) {
     console.log(row);
-}
+  }
 }
